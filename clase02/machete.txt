@@ -1,0 +1,39 @@
+Pasos a seguir en GIT:
+
+Crear un Repositorio:
+//En tu computadora - (Local)
+-Crear una carpeta en nuestra computadora
+-Click derecho y apretar en Git Bash Here. Si usas Mac o Linux, tenés que abrir una terminal en la carpeta.
+-git init
+
+//En Github - (Remoto)	
+-Ir a github y crear un repositorio en la pestaña repositories
+-Copiar el link de HTTPS
+
+//En tu computadora - (Local)
+-git remote add origin (pegar url)
+
+// Ya está vinculado tu repositorio local con el remoto
+
+Traer cosas de tu repositorio remoto
+
+-git pull origin "nombreDeRama"
+
+El origen es donde estamos parados, el nombre de la rama es de 
+donde queremos sacar la info
+
+Subir cosas a tu repositorio remoto:
+
+//En tu computadora - (Local)
+-git status (Deberías ver los cambios que hiciste en rojo)
+-git add .
+-git status (Deberías ver los cambios que hiciste en verde)
+-git commit -m "Mensaje del commit"
+-git push origin master
+
+//En Github - (Remoto)
+-Apretar F5 para ver los cambios
+
+//Cambiar de rama y comandos de rama
+git checkout -b "nombreRamaNueva"
+git checkout "nombreRama"

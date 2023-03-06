@@ -1,0 +1,223 @@
+package practicoUno;
+
+import java.util.Scanner;
+
+public class Consola {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		char opcion = '2';
+		boolean flag = true;
+		
+		System.out.println("--------------------------------");
+		System.out.println("\nIntroducción a Algoritmos y Java\n");
+		System.out.println("--------------------------------\n");
+		
+		while(flag) {
+			System.out.println("----------------");
+			System.out.println("\nLa guia consta de 2 ejercicios");
+			System.out.println("Ingrese '1' o '2' para elegir el ejercicio");
+			System.out.println("O ingrese '0' para terminar");
+			System.out.print("Ejercicio: ");
+			opcion = sc.next().charAt(0);
+			
+			switch (opcion) {
+			case '1': {
+				ejercicioUno(sc);
+				break;
+			}
+			case '2': {
+
+				ejercicioDos(sc);
+				break;
+			}
+			case '0': {
+				System.out.println("Programa terminado");
+				System.out.println("--------------------------------");
+				flag = !flag;
+				break;
+			}
+			default:
+				System.out.println("Opciones validas: 1, 2 o 0");
+				break;
+			}
+
+		}
+		sc.close();
+	}
+	
+
+	private static void ejercicioUno (Scanner sc) {
+		Integer a = 0;
+		Integer b = 0;
+		boolean flag = true;
+		System.out.println("----------------");
+		System.out.println("\nVamos a practicar operaciones básicas con números");
+		
+		do {
+			System.out.print("Ingrese un numero: ");
+			try {
+				a = sc.nextInt();
+				try {
+					System.out.print("Ingrese otro numero: ");
+					b = sc.nextInt();
+					flag = !flag;
+				} catch (Exception e) {
+					System.out.println("\nDebe ser un numero entero!");
+				}
+			} catch (Exception e) {
+				System.out.println("\nDebe ser un numero entero!");
+			}
+		} while (flag);
+		
+		//ordeno mayor y menor
+		Integer cambio = a;
+		if (a > b) {
+			a = b;
+			b = cambio;
+			cambio = a;
+		}
+		
+		System.out.println("A) Utilizando la sentencia while, imprima todos los " +
+		"números entre 2 variables “a” y “b”");
+		System.out.println("Resultado:");
+		
+		while (cambio <= b) {
+			System.out.println(cambio);
+			cambio++;
+		}
+		
+		System.out.println("\nB) A lo anterior, solo muestre los números pares");
+		System.out.println("Resultado:");
+
+		cambio = a;
+		if (!(cambio % 2 == 0))
+			cambio++;
+
+		while (cambio <= b) {
+			System.out.println(cambio);
+			cambio = cambio + 2;
+		}
+		
+		System.out.println("\nC) A lo anterior, con una variable extra, elija si se" 
+		+ " deben mostrar los números pares o impares");
+		System.out.println("Resultado:");
+	
+		flag = !flag;
+		char esPar = '0';
+		
+		do {
+			System.out.print("Elija Par <p> o Impar <i>: ");
+			esPar = sc.next().charAt(0);
+			if ((esPar == 'p')||(esPar == 'P')||(esPar == 'i')||(esPar == 'I'))
+				flag = !flag;
+		} while (flag);
+		
+		cambio = a;				
+		if ((esPar == 'p')||(esPar == 'P')) {
+			if (!(cambio % 2 == 0))cambio++;
+		}
+		else {
+			if (cambio % 2 == 0)cambio++;
+		}
+		
+		while (cambio <= b) {
+			System.out.println(cambio);					
+			cambio = cambio +2;
+		}
+		
+		System.out.println("\nD) Utilizando la sentencia for, hacer lo mismo que en"
+				+ " (b) pero invirtiendo el orden");
+		System.out.println("Resultado:");
+		
+		cambio = b;
+		if (!(cambio % 2 == 0))
+			cambio--;
+		
+		for(int i = cambio; i >= a; i=i-2) {
+			System.out.println(i);
+		}
+		
+		System.out.println("Fin de ejercicio 1.");
+		System.out.println("----------------");
+		
+	}
+	
+	
+	private static void ejercicioDos(Scanner sc) {
+		System.out.println("----------------");
+		System.out.println("\nDado el siguiente texto, vamos a atacar el siguiente problema: “determinar si una\r\n"
+				+ "persona pertenece al segmento de ingresos altos”. Del i al iii, la idea es hacerlo en\r\n"
+				+ "papel y lápiz y sólo implementar el cuarto.");
+		System.out.println("\n“Son hogares que declaran reunir alguna de las siguientes condiciones, considerando a\r\n"
+				+ "todas y todos los convivientes:\r\n"
+				+ "● Ingresos mensuales totales del hogar equivalentes o superiores a $489.083\r\n"
+				+ "(3,5 canastas básicas para un hogar tipo 2 según el INDEC).\r\n"
+				+ "● Tener 3 o más vehículos con una antigüedad menor a 5 años.\r\n"
+				+ "● Tener 3 o más inmuebles.\r\n"
+				+ "● Poseer una embarcación, una aeronave de lujo o ser titular de activos\r\n"
+				+ "societarios que demuestren capacidad económica plena.”\r\n"
+				+ "Tomado de https://www.argentina.gob.ar/subsidios el 07/12/2022");
+		System.out.println("\nA) Lea atentamente el texto, primero que nada piense cuáles son las variables de\r\n"
+				+ "entrada.");
+		System.out.println("\nB) Ordene las entradas y salidas como vimos en la tabla del ejemplo Monotributo\r\n"
+				+ "en clase");
+		System.out.println("\nC) Piense en un arbol de decision, tambien como se vio en clase si puede resolver\r\n"
+				+ "el problema, dadas las entradas");
+		System.out.println("\nFinalmente, vea si puede resolver el problema utilizando código Java.");
+		System.out.println("Resultado:\n");
+		
+		double salario = 0.0;
+		Integer vehiculos = 0;
+		Integer inmuebles = 0;
+		boolean activoLujo = false;
+		String r = "";	//para guardar entrada por teclado
+		
+		final double salarioMax = 489083;
+		final Integer vehiculosMax = 3;
+		final Integer inmueblesMax = 3;
+		
+		boolean flag = true;
+		
+		do {
+			
+			System.out.print("Ingrese el total de ingresos del grupo familiar: ");
+			try {
+				salario = sc.nextDouble();
+				System.out.print("\nCuantos vehiculos tiene con antiguedad menor a 5 años?: ");
+				try {
+					vehiculos = sc.nextInt();
+					System.out.print("\nCuantos inmuebles tiene a su nombre?: ");
+					try {
+						inmuebles = sc.nextInt();
+						System.out.println("\n Declara poseer una embarcación, una aeronave de lujo o ser titular\r\n de activos"
+								+ "societarios que demuestren capacidad económica plena?");
+						System.out.print("<Si> o <No>: ");
+						try {
+							r = sc.next();
+							activoLujo = ((r == "s")||(r == "S")||(r == "si")
+									  ||(r == "SI")||(r == "sI")||(r == "Si"));
+							//verifico que este bien escrita la respuesta
+							if(((r == "n")||(r == "N")||(r == "no")
+									  ||(r == "NO")||(r == "nO")||(r == "NO"))|| activoLujo) {
+								flag = !flag;
+							}else System.out.println("\nDebe responder con 'si' o 'no'!");
+						} catch (Exception e) {
+							System.out.println("Error en carga de datos!");
+						}
+						
+					} catch (Exception e) {
+						System.out.println("Error en carga de datos!");
+					}
+				} catch (Exception e) {
+					System.out.println("Error en carga de datos!");
+				}
+			} catch (Exception e) {
+				System.out.println("Error en carga de datos!");
+			}
+			
+		} while (flag);
+		
+	}
+
+}
