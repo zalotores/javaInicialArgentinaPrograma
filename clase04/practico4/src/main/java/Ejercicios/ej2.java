@@ -16,9 +16,9 @@ suma o multiplicación.
  *
  * @author gonza
  */
-public class ej2 {
+public class Ej2 {
     
-    public static void main(String[] args) {
+    public static void ej2() {
         System.out.println("---------------\n");
         System.out.println("Sumador / Multiplicador de numeros.");
         
