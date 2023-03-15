@@ -4,7 +4,7 @@
  */
 package Ejercicios;
 
-import UtilitiesArchivo.Leer;
+import UtilitiesArchivo.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -30,13 +30,10 @@ public class Ej1 {
         Scanner scan = new Scanner(System.in);
         boolean cargaManual = false;
         
-        System.out.println("Ingrese la ruta del archivo, o escriba 'manual' para carga manual:");
+        System.out.println("Ingrese la ruta del archivo, o presione Enter para carga manual:");
         String ruta = scan.nextLine();
-        if(ruta.length()<1) {
-            ruta = "C:\\datos\\zalo\\cursos\\argentinaPrograma\\javaInicial\\clase04\\fibonacci10.txt";
-        }
-        else if(ruta.toLowerCase() == "manual"){ cargaManual = true;}
-        
+        if(ruta.length()<1) { cargaManual = true;}
+       
         char orden = '!';
         int size = 0;
         int numeros[];
@@ -54,12 +51,25 @@ public class Ej1 {
             
         }else {
             String fh = Leer.leer(ruta);
-            String [] temp = fh.substring(1, fh.length()-1).split(" "); //elimino los corchetes
-            size = temp.length;
+            String [] temp = fh.split(" ");
+
+            size = temp.length;            
             numeros = new int[size];
             for (int i = 0; i < size; i++){
-                numeros[i] = Integer.parseInt((temp[i]));
+                //elimino corchetes si existen
+                if((i == 0) && (temp[i].contains("["))) {
+                    temp[i] = temp[i].substring(1, temp[i].length());
+                }
+                else if ((i == size - 1) && (temp[i].contains("]"))){
+                       temp[i] = temp[i].substring(0, temp[i].length()-1);                         
+                    }
+
+                try {
+                    numeros[i] = Integer.parseInt((temp[i]));
+                } catch (Exception e) {//ignora los terminos que no sean Int
+                }
             }
+
         }
         
         do {
@@ -68,20 +78,40 @@ public class Ej1 {
 
         } while (!(orden == 'A' || orden == 'D'));
         
+        numeros = ordenador(numeros, orden);
+        
         
         System.out.println("---------");
-        for (Integer numero : numeros) {System.out.println(numero);}  
+        
+        if (cargaManual){
+            
+            System.out.println("Nuevo orden:");
+            for (Integer numero : numeros) {System.out.print(numero + " ");}
+            
+        } else {
+            
+            for (Integer numero : numeros) {
+                if(numero == numeros[0]) {
+                    Escribir.escribir(ruta, (numero.toString()), "TRUNCATE_EXISTING");
+                }else {
+                    Escribir.escribir(ruta, (" " + numero), "APPEND");
+                }
+            }
+        }
+        
+        System.out.println("Programa terminado");
 
     }
     
     public static int[] ordenador(int[] lista, char orden){
-        int size = lista.length;
         Integer buffer = lista[0];
         Integer pos = 0;
         
         if (orden == 'A') {
             
-            for (Integer numero = 0; numero < (lista.length-1); numero++) {
+            for (Integer numero = 0; numero < lista.length; numero++) {
+                buffer = lista[numero];
+                pos = numero;
                 
                 for (Integer i = 0; i < (lista.length); i++) {
                     if (buffer > lista[i]) {
@@ -96,14 +126,19 @@ public class Ej1 {
         }
         else {
 
-            for (Integer numero = 0; numero < (lista.length-1); numero++) {
+            for (Integer numero = 0; numero < lista.length; numero++) {
+ 
+                buffer = lista[numero];
+                pos = numero;
                 
                 for (Integer i = 0; i < (lista.length); i++) {
                     if (buffer < lista[i]) {
+                        
                         lista[pos] = lista[i];
                         lista[i] = buffer;
                         buffer = lista[i];
                         pos = i;
+                        
                     }
                 }
             }

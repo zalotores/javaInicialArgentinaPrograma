@@ -58,7 +58,6 @@ public class Ej2 {
                 
                     if(operador == 's'){
                         resultado = resultado.add(buffer);
-                        System.out.println("suma " + buffer);
                     }
                     else {resultado = resultado.multiply(buffer);}
                     
