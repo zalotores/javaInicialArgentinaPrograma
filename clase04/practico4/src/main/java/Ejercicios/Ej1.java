@@ -6,6 +6,7 @@ package Ejercicios;
 
 import UtilitiesArchivo.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -22,7 +23,7 @@ si no detecta ninguno. Vea si con una función puede evitar repetir código.
  */
 public class Ej1 {
         
-    public static void main(String[] args) {
+    public static void ej1() {
         
         System.out.println("---------------\n");
         System.out.println("Ordenador de numeros.");
@@ -78,8 +79,7 @@ public class Ej1 {
 
         } while (!(orden == 'A' || orden == 'D'));
         
-        numeros = ordenador(numeros, orden);
-        
+        numeros = ordenador(numeros, orden);        
         
         System.out.println("---------");
         
@@ -105,20 +105,17 @@ public class Ej1 {
     
     public static int[] ordenador(int[] lista, char orden){
         Integer buffer = lista[0];
-        Integer pos = 0;
         
         if (orden == 'A') {
             
             for (Integer numero = 0; numero < lista.length; numero++) {
                 buffer = lista[numero];
-                pos = numero;
                 
-                for (Integer i = 0; i < (lista.length); i++) {
-                    if (buffer > lista[i]) {
-                        lista[pos] = lista[i];
-                        lista[i] = buffer;
+                for (Integer i = 0; i < (lista.length - 1); i++) {
+                    if (lista[i] > lista[i+1]) {
                         buffer = lista[i];
-                        pos = i;
+                        lista[i] = lista[i+1];
+                        lista[i+1] = buffer;
                     }
                 }
             }
@@ -129,15 +126,13 @@ public class Ej1 {
             for (Integer numero = 0; numero < lista.length; numero++) {
  
                 buffer = lista[numero];
-                pos = numero;
                 
-                for (Integer i = 0; i < (lista.length); i++) {
-                    if (buffer < lista[i]) {
+                for (Integer i = 0; i < (lista.length - 1); i++) {
+                    if (lista[i] < lista[i+1]) {
                         
-                        lista[pos] = lista[i];
-                        lista[i] = buffer;
                         buffer = lista[i];
-                        pos = i;
+                        lista[i] = lista[i+1];
+                        lista[i+1] = buffer;
                         
                     }
                 }

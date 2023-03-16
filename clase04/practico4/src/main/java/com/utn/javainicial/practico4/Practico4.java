@@ -4,7 +4,7 @@
 
 package com.utn.javainicial.practico4;
 
-import Ejercicios.Ej2;
+import Ejercicios.*;
 import java.util.Scanner;
 
 /**
@@ -60,13 +60,13 @@ public class Practico4 {
                 case 0:
                     flag = false;
                     System.out.println("\n*************************\n");
-                    System.out.println("Programa terminado. Presione Enter para salir");
-                    scan.next();
+                    System.out.println("Programa terminado.");
                     scan.close();
                     break;
 
                 case 1:
-
+                    
+                    Ej1.ej1();
                     break;
 
                 case 2:
@@ -75,7 +75,7 @@ public class Practico4 {
                     break;
 
                 case 3:
-
+                    Ej3.ej3();
                     break;
 
                 case 4:
