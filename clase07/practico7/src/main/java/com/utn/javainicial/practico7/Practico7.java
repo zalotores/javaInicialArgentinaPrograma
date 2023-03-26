@@ -4,6 +4,8 @@
 
 package com.utn.javainicial.practico7;
 
+import Ejercicios.Ej2;
+
 /**
  *
  * @author gonza
@@ -22,6 +24,9 @@ public class Practico7 {
         System.out.println("3. Cree 2 o 3 Tests para el método “precio” del carrito, y para los 3 descuentos\n" +
 "DescuentoFijo, DescuentoPorcentaje y DescuentoPorcentajeConTope");
         System.out.println("4. Suba el nuevo código a GIT");
+        
+        System.out.println("-------------------");
+        Ej2.ej2();
         
     }
 }
