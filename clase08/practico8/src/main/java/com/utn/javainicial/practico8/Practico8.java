@@ -5,6 +5,7 @@
 package com.utn.javainicial.practico8;
 
 import Utilities.Carrito;
+import Utilities.Producto;
 import java.util.Scanner;
 
 /**
@@ -18,7 +19,7 @@ public class Practico8 {
         System.out.println("**************");
         System.out.println("Excepciones y Colecciones");
         System.out.println("\n1. Modifique el ejercicio del carrito de la clase 5-7, para tener una cantidad ilimitada de\n" +
-"ítems. Verifique que cuando lea un archivo pueda leer items de cualquier tamaño");
+        "ítems. Verifique que cuando lea un archivo pueda leer items de cualquier tamaño");
         
         System.out.println("2. Agregue excepciones a los descuentos:");
         System.out.println("  a. que no se pueda aplicar un descuento a un carrito de precio 0");
@@ -36,6 +37,8 @@ public class Practico8 {
         
         int codigo = -1;
         int cantidad = 0;
+        float subtotal = 0;
+        int n = 0;
         
         do {
 
@@ -44,6 +47,7 @@ public class Practico8 {
                 codigo = scan.nextInt();
             } catch (Exception e) {
                 System.out.println("\nCodigo Incorrecto!");
+                codigo = 0;
             }
             
             if (codigo < 0){
@@ -57,7 +61,8 @@ public class Practico8 {
                 try {
                     cantidad = scan.nextInt();
                     carrito.agregarItem(codigo, cantidad);
-                    System.out.println("\n" + carrito.toString());//TODO
+                    subtotal = subtotal + carrito.getPrecioItem(n);
+                    n++;
                     
                 } catch (Exception e) {
                     System.out.println("\nError al cargar producto! " + e);
@@ -66,6 +71,11 @@ public class Practico8 {
             }
             
         } while (codigo != 0);
+        
+        //calculo de precio final
+        System.out.println("---------------");
+        System.out.println("Subtotal: " + subtotal);
+        
         
     }
 }

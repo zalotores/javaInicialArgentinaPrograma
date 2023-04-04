@@ -54,7 +54,7 @@ public class Producto {
     }
     
     public ItemProducto getListaProductos(Integer i){
-        return listaProductos.get(i);
+        return listaProductos.get(i-1);
     }
     
     public int getTamanhoProductos () { return listaProductos.size();}

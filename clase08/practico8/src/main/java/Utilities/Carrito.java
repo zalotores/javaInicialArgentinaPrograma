@@ -4,6 +4,7 @@
  */
 package Utilities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,9 +15,15 @@ public class Carrito {
     
     Producto prod= new Producto();
     
-    private List<ItemCarrito> items;
+    private List<ItemCarrito> items = new ArrayList<>();
 
     public Carrito() {}
+    
+    public float getPrecioItem(int elemento){
+        float subtotal = 0;
+        subtotal = items.get(elemento).getCantidad() * items.get(elemento).getItemProducto().getPrecioUnitario();
+        return subtotal;
+    }
     
     public boolean existeItem(int sku){
         try {
@@ -35,7 +42,7 @@ public class Carrito {
         ic.setCantidad(cantidad);
 
         this.items.add(ic);
-        
+        System.out.println(ic.toString());
 
     }
 
