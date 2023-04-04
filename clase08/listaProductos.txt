@@ -1,0 +1,7 @@
+codigo - descripcion - precio
+1 - jabón en polvo - 40
+2 - esponjas - 10
+3 - chocolates - 100
+4 - azucar - 22
+5 - lavandina - 45
+6 - caramelo - 14
