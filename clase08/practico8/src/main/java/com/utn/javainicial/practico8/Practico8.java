@@ -4,8 +4,9 @@
 
 package com.utn.javainicial.practico8;
 
-import Utilities.Carrito;
-import Utilities.Producto;
+import Excepciones.ExcepcionMontoNegativo;
+import Excepciones.ExcepcionPrecioCero;
+import Utilities.*;
 import java.util.Scanner;
 
 /**
@@ -28,54 +29,11 @@ public class Practico8 {
         "   del resultado del carrito");
         
         System.out.println("3. Realice algún test para probar la funcionalidad de las 2 excepciones planteadas");
-
-       Carrito carrito = new Carrito();
-       
-        System.out.println("---------------");
         
-        Scanner scan = new Scanner(System.in);
+        System.out.println("\nPara probar excepcion de carrito 0, se puede iniciar con cero y aplicar un descuento");
+        Compra.compra();
         
-        int codigo = -1;
-        int cantidad = 0;
-        float subtotal = 0;
-        int n = 0;
-        
-        do {
-
-            System.out.print("\nIngrese el codigo de producto o '0' para terminar: ");
-            try {
-                codigo = scan.nextInt();
-            } catch (Exception e) {
-                System.out.println("\nCodigo Incorrecto!");
-                codigo = 0;
-            }
-            
-            if (codigo < 0){
-                System.out.println("\nCodigo Incorrecto!");
-            }
-            else if ((codigo != 0) &&(!(carrito.existeItem(codigo)))){
-                System.out.println("\nCodigo no encontrado");
-            }
-            else if((codigo != 0) && (carrito.existeItem(codigo))){
-                System.out.print("\nIngrese cantidad: ");
-                try {
-                    cantidad = scan.nextInt();
-                    carrito.agregarItem(codigo, cantidad);
-                    subtotal = subtotal + carrito.getPrecioItem(n);
-                    n++;
-                    
-                } catch (Exception e) {
-                    System.out.println("\nError al cargar producto! " + e);
-                }
-                
-            }
-            
-        } while (codigo != 0);
-        
-        //calculo de precio final
-        System.out.println("---------------");
-        System.out.println("Subtotal: " + subtotal);
-        
-        
+        System.out.println("\n Para descuento negativo, se puede agregar un porcentaje mayor a 100");
+        Compra.compra();
     }
 }

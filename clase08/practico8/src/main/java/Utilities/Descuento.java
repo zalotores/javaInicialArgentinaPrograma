@@ -12,50 +12,30 @@ public class Descuento {
     
     private float descuento;
     private float subtotal;
-    private boolean porcentaje;
+    private float total;
     
-    public Descuento(float subtotal, float descuento) {
-        this.subtotal = subtotal;
-        this.descuento = descuento;
+    public Descuento() {}
+
+    public float getSubtotal() throws Excepciones.ExcepcionPrecioCero {
+        if(this.subtotal == 0){throw new Excepciones.ExcepcionPrecioCero("Carrito vacio!");}
+        return subtotal;
     }
 
-    public Descuento(float subtotal, float descuento, boolean porcentaje) {
+    public void setSubtotal(float subtotal) {
         this.subtotal = subtotal;
-        this.descuento = descuento;
-        this.porcentaje = porcentaje;
     }
 
     public float getDescuento() {
         return descuento;
     }
+    public void setDescuento(float descuento) {
+        this.descuento = descuento;
+    }
+    
+    public float getTotal() throws Excepciones.ExcepcionPrecioCero, Excepciones.ExcepcionMontoNegativo{
+        total = (subtotal - descuento);
+        if(total < 0){ throw new Excepciones.ExcepcionMontoNegativo("El total no puede ser negativo!");}
+        return total;
+    }
 
-    public float getSubtotal() {
-        return subtotal;
-    }
-    
-    
-    
-    public float total() {
-        return subtotal * (1 - (descuento/100));
-    }
-
-    public float total(boolean porcentaje) {
-        if (porcentaje){return subtotal * (1 - (descuento/100));}
-        return (subtotal - descuento);
-    }
-    
-    public float descuentoFijo(){
-        return (subtotal - descuento);
-    }
-    
-    public float descuentoPorcentaje() {
-        return subtotal * (1 - (descuento/100));
-    }
-    
-    public float descuentoPorcentajeConTope(float topeMontoDescuento) {
-        if((subtotal * descuento /100) > topeMontoDescuento){return subtotal - topeMontoDescuento;}
-        return subtotal * (1 - (descuento/100));
-    }
-    
-    
 }
