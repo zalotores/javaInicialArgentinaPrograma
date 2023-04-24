@@ -16,10 +16,9 @@ import java.util.List;
  */
 public class Leer {
     
-    public static String leer() {
+    public static String leer(String ruta) {
         
-        String ruta = "C:\\datos\\zalo\\cursos\\argentinaPrograma\\javaInicial\\clase08\\listaProductos.txt";
-
+        
         Path path = Paths.get(ruta);
         List<String> fh = new ArrayList();
         try {

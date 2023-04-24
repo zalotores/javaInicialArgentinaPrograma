@@ -1,0 +1,191 @@
+﻿fecha;equipo1;goles1;equipo2;goles2
+1;Arsenal;2;Estudiantes LP;1
+1;Boca Juniors;0;Newell's;1
+1;Def. y Justicia;1;Racing Club;3
+1;Gimnasia LP;1;River Plate;1
+1;Godoy Cruz Mza.;3;Banfield;0
+1;Independiente;3;At. Rafaela;0
+1;Lanús;1;Belgrano (Cba);0
+1;Rosario Central;3;Quilmes;1
+1;San Lorenzo;2;Olimpo (BB);0
+1;Tigre;0;Vélez Sarsfield;1
+2;At. Rafaela;2;Lanús;1
+2;Banfield;2;Def. y Justicia;3
+2;Belgrano (Cba);0;Boca Juniors;1
+2;Estudiantes LP;1;Independiente;0
+2;Newell's;1;Gimnasia LP;1
+2;Olimpo (BB);2;Tigre;1
+2;Quilmes;2;Godoy Cruz Mza.;2
+2;Racing Club;2;San Lorenzo;0
+2;River Plate;2;Rosario Central;0
+2;Vélez Sarsfield;2;Arsenal;1
+3;Arsenal;1;Olimpo (BB);0
+3;Boca Juniors;0;At. Rafaela;3
+3;Def. y Justicia;1;Quilmes;1
+3;Gimnasia LP;1;Rosario Central;2
+3;Godoy Cruz Mza.;0;River Plate;4
+3;Independiente;0;Vélez Sarsfield;4
+3;Lanús;2;Estudiantes LP;1
+3;Newell's;3;Belgrano (Cba);3
+3;San Lorenzo;0;Banfield;2
+3;Tigre;4;Racing Club;0
+4;At. Rafaela;2;Newell's;3
+4;Banfield;1;Tigre;0
+4;Belgrano (Cba);0;Gimnasia LP;0
+4;Estudiantes LP;3;Boca Juniors;1
+4;Olimpo (BB);1;Independiente;2
+4;Quilmes;0;San Lorenzo;3
+4;Racing Club;1;Arsenal;0
+4;River Plate;3;Def. y Justicia;0
+4;Rosario Central;0;Godoy Cruz Mza.;1
+4;Vélez Sarsfield;1;Lanús;0
+5;Arsenal;1;Banfield;0
+5;Belgrano (Cba);3;At. Rafaela;0
+5;Boca Juniors;3;Vélez Sarsfield;1
+5;Def. y Justicia;1;Rosario Central;3
+5;Gimnasia LP;2;Godoy Cruz Mza.;0
+5;Independiente;2;Racing Club;1
+5;Lanús;1;Olimpo (BB);1
+5;Newell's;1;Estudiantes LP;0
+5;San Lorenzo;1;River Plate;3
+5;Tigre;0;Quilmes;0
+6;At. Rafaela;2;Gimnasia LP;0
+6;Banfield;0;Independiente;1
+6;Estudiantes LP;3;Belgrano (Cba);1
+6;Godoy Cruz Mza.;1;Def. y Justicia;1
+6;Olimpo (BB);0;Boca Juniors;1
+6;Quilmes;4;Arsenal;0
+6;Racing Club;1;Lanús;3
+6;River Plate;2;Tigre;0
+6;Rosario Central;1;San Lorenzo;1
+6;Vélez Sarsfield;0;Newell's;0
+7;Arsenal;1;River Plate;1
+7;At. Rafaela;1;Estudiantes LP;0
+7;Belgrano (Cba);1;Vélez Sarsfield;0
+7;Boca Juniors;1;Racing Club;2
+7;Gimnasia LP;0;Def. y Justicia;3
+7;Independiente;5;Quilmes;3
+7;Lanús;1;Banfield;0
+7;Newell's;1;Olimpo (BB);0
+7;San Lorenzo;2;Godoy Cruz Mza.;1
+7;Tigre;4;Rosario Central;1
+8;Banfield;1;Boca Juniors;1
+8;Def. y Justicia;1;San Lorenzo;3
+8;Estudiantes LP;0;Gimnasia LP;0
+8;Godoy Cruz Mza.;4;Tigre;3
+8;Olimpo (BB);1;Belgrano (Cba);0
+8;Quilmes;0;Lanús;2
+8;Racing Club;1;Newell's;1
+8;River Plate;4;Independiente;1
+8;Rosario Central;3;Arsenal;1
+8;Vélez Sarsfield;0;At. Rafaela;0
+9;Banfield;1;Boca Juniors;1
+9;Def. y Justicia;1;San Lorenzo;3
+9;Estudiantes LP;0;Gimnasia LP;0
+9;Godoy Cruz Mza.;4;Tigre;3
+9;Olimpo (BB);1;Belgrano (Cba);0
+9;Quilmes;0;Lanús;2
+9;Racing Club;1;Newell's;1
+9;River Plate;4;Independiente;1
+9;Rosario Central;3;Arsenal;1
+9;Vélez Sarsfield;0;At. Rafaela;0
+10;Banfield;2;Belgrano (Cba);2
+10;Def. y Justicia;2;Arsenal;1
+10;Gimnasia LP;2;Vélez Sarsfield;0
+10;Godoy Cruz Mza.;2;Independiente;2
+10;Olimpo (BB);1;Estudiantes LP;2
+10;Quilmes;1;Newell's;1
+10;Racing Club;0;At. Rafaela;2
+10;River Plate;1;Boca Juniors;1
+10;Rosario Central;1;Lanús;2
+10;San Lorenzo;0;Tigre;2
+11;Arsenal;0;San Lorenzo;0
+11;At. Rafaela;2;Banfield;2
+11;Belgrano (Cba);1;Quilmes;1
+11;Boca Juniors;2;Rosario Central;1
+11;Estudiantes LP;0;Racing Club;4
+11;Independiente;1;Def. y Justicia;1
+11;Lanús;3;Godoy Cruz Mza.;3
+11;Newell's;0;River Plate;1
+11;Tigre;1;Gimnasia LP;0
+11;Vélez Sarsfield;4;Olimpo (BB);1
+12;Banfield;1;Estudiantes LP;1
+12;Def. y Justicia;1;Lanús;2
+12;Gimnasia LP;0;Olimpo (BB);0
+12;Godoy Cruz Mza.;2;Boca Juniors;3
+12;Quilmes;0;At. Rafaela;0
+12;Racing Club;2;Vélez Sarsfield;0
+12;River Plate;3;Belgrano (Cba);0
+12;Rosario Central;2;Newell's;0
+12;San Lorenzo;1;Independiente;2
+12;Tigre;1;Arsenal;1
+13;Arsenal;1;Gimnasia LP;0
+13;At. Rafaela;1;River Plate;2
+13;Belgrano (Cba);1;Rosario Central;0
+13;Boca Juniors;2;Def. y Justicia;0
+13;Estudiantes LP;1;Quilmes;0
+13;Independiente;3;Tigre;1
+13;Lanús;1;San Lorenzo;0
+13;Newell's;2;Godoy Cruz Mza.;2
+13;Olimpo (BB);1;Racing Club;1
+13;Vélez Sarsfield;1;Banfield;0
+14;Arsenal;1;Independiente;1
+14;Banfield;3;Olimpo (BB);0
+14;Def. y Justicia;1;Newell's;0
+14;Gimnasia LP;0;Racing Club;1
+14;Godoy Cruz Mza.;1;Belgrano (Cba);3
+14;Quilmes;2;Vélez Sarsfield;1
+14;River Plate;0;Estudiantes LP;1
+14;Rosario Central;0;At. Rafaela;2
+14;San Lorenzo;2;Boca Juniors;0
+14;Tigre;3;Lanús;0
+15;At. Rafaela;3;Godoy Cruz Mza.;4
+15;Belgrano (Cba);3;Def. y Justicia;0
+15;Boca Juniors;2;Tigre;0
+15;Estudiantes LP;1;Rosario Central;0
+15;Independiente;0;Gimnasia LP;1
+15;Lanús;3;Arsenal;2
+15;Newell's;3;San Lorenzo;1
+15;Olimpo (BB);2;Quilmes;1
+15;Racing Club;1;Banfield;0
+15;Vélez Sarsfield;1;River Plate;1
+16;Arsenal;1;Boca Juniors;1
+16;Def. y Justicia;2;At. Rafaela;1
+16;Gimnasia LP;1;Banfield;1
+16;Godoy Cruz Mza.;1;Estudiantes LP;1
+16;Independiente;4;Lanús;1
+16;Quilmes;0;Racing Club;1
+16;River Plate;1;Olimpo (BB);1
+16;Rosario Central;0;Vélez Sarsfield;0
+16;San Lorenzo;4;Belgrano (Cba);0
+16;Tigre;1;Newell's;2
+17;At. Rafaela;2;San Lorenzo;0
+17;Banfield;3;Quilmes;1
+17;Belgrano (Cba);1;Tigre;2
+17;Boca Juniors;3;Independiente;1
+17;Estudiantes LP;0;Def. y Justicia;0
+17;Lanús;2;Gimnasia LP;0
+17;Newell's;2;Arsenal;4
+17;Olimpo (BB);1;Rosario Central;1
+17;Racing Club;1;River Plate;0
+17;Vélez Sarsfield;1;Godoy Cruz Mza.;4
+18;Arsenal;0;Belgrano (Cba);2
+18;Def. y Justicia;0;Vélez Sarsfield;2
+18;Gimnasia LP;3;Quilmes;0
+18;Godoy Cruz Mza.;0;Olimpo (BB);3
+18;Independiente;1;Newell's;0
+18;Lanús;2;Boca Juniors;2
+18;River Plate;3;Banfield;2
+18;Rosario Central;0;Racing Club;3
+18;San Lorenzo;4;Estudiantes LP;0
+18;Tigre;3;At. Rafaela;1
+19;At. Rafaela;1;Arsenal;6
+19;Banfield;2;Rosario Central;3
+19;Belgrano (Cba);4;Independiente;0
+19;Boca Juniors;0;Gimnasia LP;2
+19;Estudiantes LP;4;Tigre;2
+19;Newell's;0;Lanús;0
+19;Olimpo (BB);0;Def. y Justicia;0
+19;Quilmes;0;River Plate;1
+19;Racing Club;1;Godoy Cruz Mza.;0
+19;Vélez Sarsfield;0;San Lorenzo;2

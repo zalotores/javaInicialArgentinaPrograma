@@ -4,6 +4,11 @@
 
 package com.utn.javainicial.practico10;
 
+import Clases.Alumno;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /**
  *
  * @author gonza
@@ -52,5 +57,13 @@ public class Practico10 {
         
         //comienzo de programa
         
+        Scanner scan = new Scanner(System.in);
+        String nombre = "Juan Perez";
+        String legajo = "108832";
+        
+        Alumno alumno1 = new Alumno(nombre, legajo);
+        alumno1.setMateriasAprobadas();
+
+        System.out.println(alumno1.toString());
     }
 }
