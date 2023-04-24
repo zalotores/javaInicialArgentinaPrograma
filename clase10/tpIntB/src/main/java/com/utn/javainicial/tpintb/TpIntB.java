@@ -17,5 +17,6 @@ public class TpIntB {
         
         Scanner scan = new Scanner(System.in);
         
+        
     }
 }
