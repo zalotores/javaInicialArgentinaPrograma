@@ -4,6 +4,7 @@
  */
 package Tests;
 
+import Clases.Jugador;
 import Clases.Partidos;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,7 +19,12 @@ public class TestPartidos {
     
     public static void main(String[] args) {
         
-        HashMap<String, Integer> puntuacionesTotales = Partidos.puntajesTotales();
+        System.out.println("Jugador 1: Player1");
+        Jugador player1 = new Jugador("Player 1");
+        System.out.println("Archivo de predicciones guardado en /Datos/player1.csv");
+        player1.setRuta("player1.csv");
+        
+        HashMap<String, Integer> puntuacionesTotales = Partidos.puntajesTotales(player1);
         
         ArrayList totales = new ArrayList();
         
