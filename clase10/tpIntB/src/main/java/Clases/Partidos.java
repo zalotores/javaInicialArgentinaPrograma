@@ -15,6 +15,8 @@ public class Partidos {
     
     public static HashMap<String, Integer> puntajesTotales(Jugador jugador) {
         
+        jugador.reSetPuntaje();
+        
         HashMap<String, Integer> listaEquipos = Equipos.getEquipos();
         
         int fecha = 0;

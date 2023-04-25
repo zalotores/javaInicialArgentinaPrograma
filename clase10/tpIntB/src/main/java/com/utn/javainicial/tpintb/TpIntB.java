@@ -37,12 +37,15 @@ public class TpIntB {
         player2.setRuta("player2.csv");
         
         HashMap<String, Integer> puntuacionesTotales = Partidos.puntajesTotales(player1);
+        int puntajeJugador1 = player1.getPuntaje();
+        
         Partidos.puntajesTotales(player2);
+        int puntajeJugador2 = player2.getPuntaje();
         
         System.out.println("\n************");
         System.out.println("Resultados finales");
-        System.out.println("Jugador 1: " + player1.getPuntaje());
-        System.out.println("Jugador 2: " + player2.getPuntaje());
+        System.out.println("Jugador 1: " + puntajeJugador1 );
+        System.out.println("Jugador 2: " + puntajeJugador2);
         System.out.println("\nResultados del torneo:");
         
         ArrayList totales = new ArrayList();

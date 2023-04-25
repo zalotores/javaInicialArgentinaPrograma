@@ -30,6 +30,10 @@ public class Jugador {
     public static void setPuntaje(int puntaje) {
         Jugador.puntaje += puntaje;
     }
+    
+    public static void reSetPuntaje() {
+        Jugador.puntaje = 0;
+    }
 
     public String getRuta() {
         return ruta;
