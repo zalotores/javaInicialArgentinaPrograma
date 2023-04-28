@@ -17,7 +17,7 @@ public class Conexion {
     Connection conectar = null;
     String usuario = "root";
     String contraseña = "Exa76419";
-    String bd = "argprograma";
+    String bd = "argentina_programa";
     String ip = "localhost";
     String puerto = "3306";
     
@@ -28,7 +28,7 @@ public class Conexion {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conectar = DriverManager.getConnection(ruta, usuario, contraseña);
-            JOptionPane.showMessageDialog(null, "Se conecto correctamente");
+            //JOptionPane.showMessageDialog(null, "Se conecto correctamente");
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "NO se conecto correctamente" + e);

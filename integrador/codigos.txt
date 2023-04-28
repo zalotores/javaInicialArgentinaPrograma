@@ -1,0 +1,92 @@
+public static void verificacion() throws SQLException, JsonProcessingException {
+
+        System.out.println("Que alumno quiere inscribir? (Legajo)");
+        int legajoAlumno = sc.nextInt();
+        System.out.println("A que materia se quiere inscribir?");
+        String nombreMateria = sc.next();
+
+        Inscripcion insc = new Inscripcion();
+        insc.aprobada(traerDatosAlumno(legajoAlumno), traerDatosMateria(nombreMateria));
+    
+    }
+
+    public static Alumno traerDatosAlumno(int legajo) throws SQLException, JsonProcessingException {
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
+
+        conexion.estableceConexion();
+        Statement stmt = conexion.conectar.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM alumnos_final WHERE legajo=" + legajo + ";");
+        rs.next();
+        Alumno alumno = new Alumno(rs.getString("nombre"), rs.getInt("legajo"));
+
+        String jsonText = mapper.writeValueAsString(rs.getString("correlativas"));
+
+        ArrayList<String> nombreCorrelativas = mapper.readValue(jsonText, ArrayList.class);
+
+        alumno.setMateriasAprobadas(nombreCorrelativas);
+
+        //alumno.setMateriasAprobadas(mapper.readValue(mapper.writeValueAsString(rs.getString("correlativas")), ArrayList.class));
+        conexion.cerrarConnection();
+
+        return alumno;
+    }
+
+    public static Materia traerDatosMateria(String nombre) throws SQLException, JsonProcessingException {
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
+
+        conexion.estableceConexion();
+        Statement stmt = conexion.conectar.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM materias_final WHERE nombre=\"" + nombre + "\";");
+        rs.next();
+        Materia materia = new Materia(rs.getString("nombre"));
+
+        materia.setCorrelativas(mapper.readValue(mapper.writeValueAsString(rs.getString("correlativas")), ArrayList.class));
+
+        conexion.cerrarConnection();
+
+        return materia;
+    }
+
+
+
+
+
+HashMap<String, Alumno> listaAlumnos = new HashMap<>();
+        int input = sc.nextInt();
+        
+        for (int i = 0; i < input; i++) {
+            
+            System.out.println("Ingrese nombre y legajo");
+            String nombre = sc.next();
+            int legajo = sc.nextInt();
+            listaAlumnos.put(nombre, crearAlumno(nombre, legajo));
+            
+        }
+        
+        System.out.println(listaAlumnos);
+        
+        System.out.println(listaAlumnos.get("Joaquin").getLegajo());
+
+
+
+
+
+
+public static Alumno crearAlumno(String nombre, int legajo){
+        return new Alumno(nombre, legajo);
+    }
+
+
+
+
+
+INSERT INTO alumnos_final VALUES("Nombre", 22322, '["Nombre1", "Nombre2"]');
+
+
+
+
+
