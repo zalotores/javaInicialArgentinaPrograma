@@ -44,9 +44,10 @@ DELETE FROM practico12_secundaria WHERE id = 4;
 #7. Conocer los empleados que trabajan en el departamento de “logística” (puede ser
 #cualquiera de los que agreguen).
 
-SELECT * FROM practico12 a JOIN practico12_secundaria b ON a.departamento = b.id;
+SELECT * FROM practico12 a JOIN practico12_secundaria b ON a.departamento = b.id WHERE b.id = 1;
 
 #8. Mostrar todos los departamentos ordenados alfabéticamente.
 
 SELECT * FROM practico12_secundaria ORDER BY departamento;
+
 
