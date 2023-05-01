@@ -46,8 +46,9 @@ public class Inscripcion {
         ArrayList <String> correlativas = this.materia.getCorrelativas();
         ArrayList <String> aprobadas = this.alumno.getListaMaterias();
         int n = 0;
+        if (correlativas.get(0).length() < 1) {return true;}
         for (String correlativa : correlativas) {
-            //resultado = false;
+
             for (String aprobada : aprobadas) {
                 if (correlativa.equals(aprobada)) {
                     n++;
@@ -55,8 +56,12 @@ public class Inscripcion {
                 }
             }
         }
-        if (n == correlativas.size()) { return true;}
-        else return false;
+        if (n == correlativas.size()) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
     
 }

@@ -24,6 +24,10 @@ public class Alumno {
         this.nombre = nombre;
     }
 
+    public Alumno() {
+        
+    }
+
     public String getNombre() {
         return nombre;
     }

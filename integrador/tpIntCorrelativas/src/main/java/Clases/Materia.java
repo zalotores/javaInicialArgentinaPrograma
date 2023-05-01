@@ -19,6 +19,10 @@ public class Materia {
     public Materia(String nombre) {
         this.nombre = nombre;
     }
+    
+    public Materia(){
+        
+    }
 
     public String getNombre() {
         return nombre;

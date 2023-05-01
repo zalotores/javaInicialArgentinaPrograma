@@ -18,7 +18,7 @@ public class PruebaGestorDatos {
         
         //carga de alumno
         GestorDatos.cargarAlumno();
-        
+        /*
         //traer un alumno
         Alumno pepito = GestorDatos.traerAlumno(76419);
         System.out.println(pepito.toString());
@@ -29,7 +29,7 @@ public class PruebaGestorDatos {
         //traer una materia
         Materia cosa = GestorDatos.traerMateria("programacion 2");
         System.out.println(cosa.toString());
-        
+        */
     }
     
 }

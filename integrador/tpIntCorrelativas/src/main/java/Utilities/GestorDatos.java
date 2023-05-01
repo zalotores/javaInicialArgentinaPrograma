@@ -39,7 +39,7 @@ public class GestorDatos {
             validador = scan.nextLine().toLowerCase();
             if(validador.startsWith("s")){break;}
         }
-        
+        //scan.close();
         Alumno alumno = new Alumno(nombre);
         alumno.setLegajo();
         legajo = alumno.getLegajo();
@@ -75,6 +75,8 @@ public class GestorDatos {
             alumno.setLegajo(rs.getInt("legajo"));
             alumno.setListaMaterias(Arrays.convertirString(rs.getString("materias_aprobadas")));
             con.close();
+            rs.close();
+            stmt.close();
             return alumno;
         } catch (Exception e) {
             System.out.println("Error! " + e);
@@ -101,7 +103,7 @@ public class GestorDatos {
             validador = scan.nextLine().toLowerCase();
             if(validador.startsWith("s")){break;}
         }
-        
+        //scan.close();
         Materia materia = new Materia(nombre);
         materia.setCorrelativas();
         
@@ -132,6 +134,8 @@ public class GestorDatos {
             Materia materia = new Materia(rs.getString("nombre"));
             materia.setCorrelativas(Arrays.convertirString(rs.getString("correlativas")));
             con.close();
+            rs.close();
+            stmt.close();
             return materia;
             
         } catch (Exception e) {

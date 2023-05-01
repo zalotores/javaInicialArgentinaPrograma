@@ -4,6 +4,8 @@
 
 package com.utn.javainicial.tpintcorrelativas;
 
+import Utilities.Menu;
+
 /**
  *
  * @author gonza
@@ -11,6 +13,6 @@ package com.utn.javainicial.tpintcorrelativas;
 public class TpIntCorrelativas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Menu.menu();
     }
 }

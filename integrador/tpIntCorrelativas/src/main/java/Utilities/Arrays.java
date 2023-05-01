@@ -35,7 +35,7 @@ public class Arrays {
                 System.out.println("Guardado");
             }
         }
-        scan.close();
+        //scan.close();
         return lista;
     }
     
