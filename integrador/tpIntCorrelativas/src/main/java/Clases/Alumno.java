@@ -43,8 +43,10 @@ public class Alumno {
         } while (flag);
         
     }
-    
-    
+
+    public void setLegajo(int legajo) {
+        this.legajo = legajo;
+    }
 
     public int getLegajo() {
         return legajo;
@@ -57,6 +59,10 @@ public class Alumno {
     public void setListaMaterias() {
 
         this.listaMaterias = Arrays.cargar();
+    }
+
+    public void setListaMaterias(ArrayList<String> listaMaterias) {
+        this.listaMaterias = listaMaterias;
     }
 
     @Override

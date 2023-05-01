@@ -32,6 +32,10 @@ public class Materias {
         this.correlativas = Arrays.cargar();     
     }
 
+    public void setCorrelativas(ArrayList<String> correlativas) {
+        this.correlativas = correlativas;
+    }
+
     @Override
     public String toString() {
         return "Materias{" + "nombre=" + nombre + ", correlativas=" + correlativas + '}';

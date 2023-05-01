@@ -35,8 +35,28 @@ public class Arrays {
                 System.out.println("Guardado");
             }
         }
-        
+        scan.close();
         return lista;
+    }
+    
+    public static ArrayList<String> convertirString(String entrada) {
+        
+        ArrayList <String> resultado = new ArrayList<>();
+        
+        String [] buffer = entrada.split(",");
+        String palabra = "";
+        buffer[0] = buffer[0].replace('[', ' ');
+        buffer[0] = buffer[0].replace('\'', ' ');
+        buffer[buffer.length-1] = buffer[buffer.length-1].replace(']', ' ');
+        buffer[buffer.length-1] = buffer[buffer.length-1].replace('\'', ' ');
+        for (int i = 0; i < buffer.length; i++) {
+            
+            palabra = buffer[i].strip();
+            resultado.add(palabra);
+        }
+        
+        
+        return resultado;
     }
     
 }
