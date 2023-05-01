@@ -5,7 +5,7 @@
 package Pruebas;
 
 import Clases.Alumno;
-import Clases.Materias;
+import Clases.Materia;
 import Utilities.GestorDatos;
 
 /**
@@ -27,7 +27,7 @@ public class PruebaGestorDatos {
         GestorDatos.cargarMateria();
         
         //traer una materia
-        Materias cosa = GestorDatos.traerMateria("programacion 2");
+        Materia cosa = GestorDatos.traerMateria("programacion 2");
         System.out.println(cosa.toString());
         
     }

@@ -5,7 +5,7 @@
 package Utilities;
 
 import Clases.Alumno;
-import Clases.Materias;
+import Clases.Materia;
 import Conexiones.Conexion;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.sql.Connection;
@@ -102,7 +102,7 @@ public class GestorDatos {
             if(validador.startsWith("s")){break;}
         }
         
-        Materias materia = new Materias(nombre);
+        Materia materia = new Materia(nombre);
         materia.setCorrelativas();
         
         ObjectMapper om = new ObjectMapper();
@@ -121,7 +121,7 @@ public class GestorDatos {
         
     }
     
-    public static Materias traerMateria(String nombre) {
+    public static Materia traerMateria(String nombre) {
         Conexion c = new Conexion();
         Connection con = c.estableceConexion();
         
@@ -129,7 +129,7 @@ public class GestorDatos {
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM materias_final WHERE nombre = '" + nombre + "'");
             rs.next();
-            Materias materia = new Materias(rs.getString("nombre"));
+            Materia materia = new Materia(rs.getString("nombre"));
             materia.setCorrelativas(Arrays.convertirString(rs.getString("correlativas")));
             con.close();
             return materia;

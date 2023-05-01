@@ -4,7 +4,7 @@
  */
 package Pruebas;
 
-import Clases.Materias;
+import Clases.Materia;
 
 /**
  *
@@ -14,7 +14,7 @@ public class PruebaMaterias {
     
     public static void main(String[] args) {
         
-        Materias materia = new Materias("programacion 2");
+        Materia materia = new Materia("programacion 2");
         materia.setCorrelativas();
         System.out.println(materia.toString());
         

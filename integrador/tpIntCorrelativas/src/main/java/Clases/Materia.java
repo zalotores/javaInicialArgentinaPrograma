@@ -11,12 +11,12 @@ import java.util.ArrayList;
  *
  * @author gonza
  */
-public class Materias {
+public class Materia {
     
     private String nombre;
     private ArrayList <String> correlativas = new ArrayList<>();
 
-    public Materias(String nombre) {
+    public Materia(String nombre) {
         this.nombre = nombre;
     }
 
